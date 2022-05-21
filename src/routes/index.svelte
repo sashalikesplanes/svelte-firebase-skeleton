@@ -1,7 +1,20 @@
 <script>
-  import { loop_guard } from "svelte/internal";
-import { changeClaimed, getAllGifts } from "./_firebase.js";
-  let giftsPromise = getAllGifts();
+  async function fetchGifts() {
+    const response = await fetch("/gifts", {});
+    return await response.json();
+  }
+
+  async function claimGift(gift) {
+    await fetch("/gifts", {
+      method: "post",
+      headers: {
+      'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(gift),
+    })
+  }
+
+  const giftsPromise = fetchGifts();
 </script>
 
 <h1>Welcome to Denis' Gift List</h1>
@@ -11,9 +24,9 @@ import { changeClaimed, getAllGifts } from "./_firebase.js";
   <ul>
     {#each gifts as gift}
       <li>
-        <label class="container"><a href={gift.link}>{gift.name}</a>
+        <label class="container"><a href={gift.link} target="_blank">{gift.name}</a>
           <input type="checkbox" checked={gift.claimed}>
-          <span class="checkmark" on:click={() => changeClaimed(gift)}></span>
+          <span class="checkmark" on:click={() => claimGift(gift)}></span>
         </label>
       </li>
     {/each}

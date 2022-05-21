@@ -11,7 +11,7 @@
     "check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "local-serve": "npm run build --watch | firebase serve"
+    "local-serve": "npm run build | npm run preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
