@@ -6,7 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%svelte.head%
 	</head>
+	<link rel="stylesheet" href="../static/reset.css" />
+	<style>
+		div.app {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+		body {
+			font-family: sans-serif;
+			color: #aec4db;
+			background-color: #203748;
+			font-size: 30px;
+		}
+	</style>
 	<body>
-		<div>%svelte.body%</div>
+		<div class="app">%svelte.body%</div>
 	</body>
 </html>
