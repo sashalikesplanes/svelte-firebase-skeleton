@@ -29,10 +29,12 @@
   <ul>
     {#each gifts as gift}
       <li>
-        <label class="container"><a href={gift.link} target="_blank">{gift.name}</a>
-          <input type="checkbox" checked={gift.claimed}>
-          <span class="checkmark" on:click={() => claimGift(gift)}></span>
-        </label>
+        <form action="">
+          <label class="form-control">
+            <input type="checkbox" name="checkbox" checked={gift.claimed} on:click={() => claimGift(gift)}/>
+            <a href={gift.link} target="_blank">{gift.name}</a>
+          </label>
+        </form>
       </li>
     {/each}
   </ul>
@@ -41,19 +43,42 @@
 <style>
 
   h1 {
-    margin: 20px;
+    margin-bottom: 20px;
     font-size: 2rem;
     font-weight: bold;
   }
 
+  ul {
+    padding: 1rem;
+    columns: 3;
+  }
+
+  .form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
   @media only screen and (max-width: 600px) {
   h1 {
     font-size: 1rem;
   }
+  ul {
+    columns: 1;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+  .form-control {
+    font-size: 0.75rem;
+  }
 }
   li {
     display: flex;
-    margin: 10px;
+    padding: 0.5rem;
   }
   a {
     color: rgb(44, 55, 66);
@@ -62,71 +87,71 @@
   }
 
   /* Customize the label (the container) */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  :root {
+  --form-control-color: rgb(209, 161, 138);
+  --form-control-disabled: #959495;
 }
 
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: rgb(223, 194, 181);
+form {
+  display: grid;
+  place-content: center;
 }
 
-/* On mouse-over, add a grey background color */
-.checkmark:hover {
-  background-color: #ccc;
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
 }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: rgb(44, 55, 66);
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+input[type="checkbox"]::before {
   content: "";
-  position: absolute;
-  display: none;
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
 }
 </style>
 
