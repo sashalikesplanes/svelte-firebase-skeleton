@@ -1,4 +1,8 @@
-// Import the functions you need from the SDKs you need
+// Endpoints in order to enable reading and modifying the gifts collection on Firestore
+
+// GET /gifts returns a body with the list of all the gifts objects
+
+// POST /gifts will attempt to toggle the claimed status of the gift object passed to it in the body as a JSON string
 import { initializeApp } from 'firebase/app';
 import {
 	getFirestore,
@@ -8,6 +12,7 @@ import {
 	updateDoc,
 	query,
 	getDocs
+	// onSnapshot
 } from 'firebase/firestore';
 
 const COLLECTION_NAME = 'gifts';
@@ -29,12 +34,12 @@ export async function get() {
 		querySnapshot.forEach((gift) => gifts.push({ ...gift.data(), id: gift.id }));
 
 		return {
-			body: gifts
+			body: JSON.stringify(gifts)
 		};
 	} catch (e) {
 		console.log(e);
 		return {
-			stats: 500
+			status: 500
 		};
 	}
 }

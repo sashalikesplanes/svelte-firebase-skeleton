@@ -1,4 +1,6 @@
 <script>
+  // Access to database done through hitting endpoints
+  // in order to protect access to Firestore and keep it server side only
   async function fetchGifts() {
     const response = await fetch("/gifts", {});
     return await response.json();
@@ -14,10 +16,11 @@
     })
   }
 
-  const giftsPromise = fetchGifts();
+  let giftsPromise = fetchGifts();
 </script>
 
-<h1>Welcome to Denis' Gift List</h1>
+<h1>Denis' Gift List</h1>
+<p>Please leave a tick on the gift you intend to give</p>
 {#await giftsPromise}
   <p>Loading Gifts...</p>
 {:then gifts}
@@ -34,13 +37,20 @@
 {/await}
 
 <style>
+
+  h1 {
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
   li {
     display: flex;
+    margin: 10px;
   }
-
   a {
-    color: #cec95d;
+    color: rgb(44, 55, 66);
     text-decoration: none;
+
   }
 
   /* Customize the label (the container) */
@@ -50,7 +60,7 @@
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -73,7 +83,7 @@
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: rgb(223, 194, 181);
 }
 
 /* On mouse-over, add a grey background color */
@@ -83,7 +93,7 @@
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #770b1e;
+  background-color: rgb(44, 55, 66);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

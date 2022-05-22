@@ -5618,13 +5618,14 @@ var init_index_svelte = __esm({
     init_shims();
     init_index_dea3f4e7();
     css3 = {
-      code: 'li.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8{display:flex}a.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8{color:#cec95d;text-decoration:none}.container.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:22px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.container.svelte-1hp9ba8 input.svelte-1hp9ba8.svelte-1hp9ba8{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8{position:absolute;top:0;left:0;height:25px;width:25px;background-color:#eee}.checkmark.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8:hover{background-color:#ccc}.container.svelte-1hp9ba8 input.svelte-1hp9ba8:checked~.checkmark.svelte-1hp9ba8{background-color:#770b1e}.checkmark.svelte-1hp9ba8.svelte-1hp9ba8.svelte-1hp9ba8:after{content:"";position:absolute;display:none}.container.svelte-1hp9ba8 input.svelte-1hp9ba8:checked~.checkmark.svelte-1hp9ba8:after{display:block}.container.svelte-1hp9ba8 .checkmark.svelte-1hp9ba8.svelte-1hp9ba8:after{left:9px;top:5px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}',
+      code: 'h1.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{margin:20px;font-size:2rem;font-weight:bold}li.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{display:flex;margin:10px}a.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{color:rgb(44, 55, 66);text-decoration:none}.container.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.container.svelte-g8q1d input.svelte-g8q1d.svelte-g8q1d{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{position:absolute;top:0;left:0;height:25px;width:25px;background-color:rgb(223, 194, 181)}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d:hover{background-color:#ccc}.container.svelte-g8q1d input.svelte-g8q1d:checked~.checkmark.svelte-g8q1d{background-color:rgb(44, 55, 66)}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d:after{content:"";position:absolute;display:none}.container.svelte-g8q1d input.svelte-g8q1d:checked~.checkmark.svelte-g8q1d:after{display:block}.container.svelte-g8q1d .checkmark.svelte-g8q1d.svelte-g8q1d:after{left:9px;top:5px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}',
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      const giftsPromise = fetchGifts();
+      let giftsPromise = fetchGifts();
       $$result.css.add(css3);
-      return `<h1>Welcome to Denis&#39; Gift List</h1>
+      return `<h1 class="${"svelte-g8q1d"}">Denis&#39; Gift List</h1>
+<p>Please leave a tick on the gift you intend to give</p>
 ${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop2);
@@ -5635,9 +5636,9 @@ ${function(__value) {
         return function(gifts) {
           return `
   <ul>${each(gifts, (gift) => {
-            return `<li class="${"svelte-1hp9ba8"}"><label class="${"container svelte-1hp9ba8"}"><a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1hp9ba8"}">${escape(gift.name)}</a>
-          <input type="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1hp9ba8"}">
-          <span class="${"checkmark svelte-1hp9ba8"}"></span></label>
+            return `<li class="${"svelte-g8q1d"}"><label class="${"container svelte-g8q1d"}"><a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-g8q1d"}">${escape(gift.name)}</a>
+          <input type="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-g8q1d"}">
+          <span class="${"checkmark svelte-g8q1d"}"></span></label>
       </li>`;
           })}</ul>
 `;
@@ -5660,9 +5661,9 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-c600baaf.js";
-    js3 = ["pages/index.svelte-c600baaf.js", "chunks/index-62fbe76e.js"];
-    css4 = ["assets/pages/index.svelte-6e218c5d.css"];
+    entry3 = "pages/index.svelte-47678f80.js";
+    js3 = ["pages/index.svelte-47678f80.js", "chunks/index-62fbe76e.js"];
+    css4 = ["assets/pages/index.svelte-7cf51bd6.css"];
   }
 });
 
@@ -35171,12 +35172,12 @@ async function get() {
     const gifts = [];
     querySnapshot.forEach((gift) => gifts.push(__spreadProps3(__spreadValues3({}, gift.data()), { id: gift.id })));
     return {
-      body: gifts
+      body: JSON.stringify(gifts)
     };
   } catch (e2) {
     console.log(e2);
     return {
-      stats: 500
+      status: 500
     };
   }
 }
@@ -37483,7 +37484,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: #aec4db;\n			background-color: #203748;\n			font-size: 30px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var Server = class {
@@ -37543,7 +37544,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-0541ed9d.js", "js": ["start-0541ed9d.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-f972e61c.js", "js": ["start-f972e61c.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
