@@ -5608,7 +5608,7 @@ var index_svelte_exports = {};
 __export(index_svelte_exports, {
   default: () => Routes
 });
-async function fetchGifts() {
+async function load2() {
   const response = await fetch("/gifts", {});
   return await response.json();
 }
@@ -5618,13 +5618,15 @@ var init_index_svelte = __esm({
     init_shims();
     init_index_dea3f4e7();
     css3 = {
-      code: 'h1.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{margin:20px;font-size:2rem;font-weight:bold}li.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{display:flex;margin:10px}a.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{color:rgb(44, 55, 66);text-decoration:none}.container.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.container.svelte-g8q1d input.svelte-g8q1d.svelte-g8q1d{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d{position:absolute;top:0;left:0;height:25px;width:25px;background-color:rgb(223, 194, 181)}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d:hover{background-color:#ccc}.container.svelte-g8q1d input.svelte-g8q1d:checked~.checkmark.svelte-g8q1d{background-color:rgb(44, 55, 66)}.checkmark.svelte-g8q1d.svelte-g8q1d.svelte-g8q1d:after{content:"";position:absolute;display:none}.container.svelte-g8q1d input.svelte-g8q1d:checked~.checkmark.svelte-g8q1d:after{display:block}.container.svelte-g8q1d .checkmark.svelte-g8q1d.svelte-g8q1d:after{left:9px;top:5px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}',
+      code: 'h1.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{margin:20px;font-size:2rem;font-weight:bold}@media only screen and (max-width: 600px){h1.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{font-size:1rem}}li.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{display:flex;margin:10px}a.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{color:rgb(44, 55, 66);text-decoration:none}.container.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.container.svelte-1p33fhw input.svelte-1p33fhw.svelte-1p33fhw{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{position:absolute;top:0;left:0;height:25px;width:25px;background-color:rgb(223, 194, 181)}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw:hover{background-color:#ccc}.container.svelte-1p33fhw input.svelte-1p33fhw:checked~.checkmark.svelte-1p33fhw{background-color:rgb(44, 55, 66)}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw:after{content:"";position:absolute;display:none}.container.svelte-1p33fhw input.svelte-1p33fhw:checked~.checkmark.svelte-1p33fhw:after{display:block}.container.svelte-1p33fhw .checkmark.svelte-1p33fhw.svelte-1p33fhw:after{left:9px;top:5px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}',
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let giftsPromise = fetchGifts();
+      let giftsPromise = load2();
+      if ($$props.load === void 0 && $$bindings.load && load2 !== void 0)
+        $$bindings.load(load2);
       $$result.css.add(css3);
-      return `<h1 class="${"svelte-g8q1d"}">Denis&#39; Gift List</h1>
+      return `<h1 class="${"svelte-1p33fhw"}">Denis&#39; Gift List</h1>
 <p>Please leave a tick on the gift you intend to give</p>
 ${function(__value) {
         if (is_promise(__value)) {
@@ -5636,9 +5638,9 @@ ${function(__value) {
         return function(gifts) {
           return `
   <ul>${each(gifts, (gift) => {
-            return `<li class="${"svelte-g8q1d"}"><label class="${"container svelte-g8q1d"}"><a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-g8q1d"}">${escape(gift.name)}</a>
-          <input type="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-g8q1d"}">
-          <span class="${"checkmark svelte-g8q1d"}"></span></label>
+            return `<li class="${"svelte-1p33fhw"}"><label class="${"container svelte-1p33fhw"}"><a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1p33fhw"}">${escape(gift.name)}</a>
+          <input type="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1p33fhw"}">
+          <span class="${"checkmark svelte-1p33fhw"}"></span></label>
       </li>`;
           })}</ul>
 `;
@@ -5661,9 +5663,9 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-47678f80.js";
-    js3 = ["pages/index.svelte-47678f80.js", "chunks/index-62fbe76e.js"];
-    css4 = ["assets/pages/index.svelte-7cf51bd6.css"];
+    entry3 = "pages/index.svelte-9df0a4de.js";
+    js3 = ["pages/index.svelte-9df0a4de.js", "chunks/index-62fbe76e.js"];
+    css4 = ["assets/pages/index.svelte-5408dff6.css"];
   }
 });
 
@@ -13769,14 +13771,14 @@ var require_root = __commonJS({
     Root2.prototype.fetch = util.fetch;
     function SYNC() {
     }
-    Root2.prototype.load = function load2(filename, options, callback) {
+    Root2.prototype.load = function load3(filename, options, callback) {
       if (typeof options === "function") {
         callback = options;
         options = void 0;
       }
       var self2 = this;
       if (!callback)
-        return util.asPromise(load2, self2, filename, options);
+        return util.asPromise(load3, self2, filename, options);
       var sync = callback === SYNC;
       function finish(err, root) {
         if (!callback)
@@ -14330,7 +14332,7 @@ var require_index_light = __commonJS({
     init_shims();
     var protobuf = module2.exports = require_index_minimal();
     protobuf.build = "light";
-    function load2(filename, root, callback) {
+    function load3(filename, root, callback) {
       if (typeof root === "function") {
         callback = root;
         root = new protobuf.Root();
@@ -14338,7 +14340,7 @@ var require_index_light = __commonJS({
         root = new protobuf.Root();
       return root.load(filename, callback);
     }
-    protobuf.load = load2;
+    protobuf.load = load3;
     function loadSync(filename, root) {
       if (!root)
         root = new protobuf.Root();
@@ -18026,12 +18028,12 @@ var require_src2 = __commonJS({
       root.resolveAll();
       return createPackageDefinition(root, options);
     }
-    function load2(filename, options) {
+    function load3(filename, options) {
       return util_1.loadProtosWithOptions(filename, options).then((loadedRoot) => {
         return createPackageDefinition(loadedRoot, options);
       });
     }
-    exports2.load = load2;
+    exports2.load = load3;
     function loadSync(filename, options) {
       const loadedRoot = util_1.loadProtosWithOptionsSync(filename, options);
       return createPackageDefinition(loadedRoot, options);
@@ -37484,7 +37486,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n			text-align: center;\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var Server = class {
@@ -37544,7 +37546,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-f972e61c.js", "js": ["start-f972e61c.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-251d062b.js", "js": ["start-251d062b.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

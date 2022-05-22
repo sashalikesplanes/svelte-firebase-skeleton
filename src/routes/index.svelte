@@ -1,7 +1,7 @@
 <script>
   // Access to database done through hitting endpoints
   // in order to protect access to Firestore and keep it server side only
-  async function fetchGifts() {
+  export async function load() {
     const response = await fetch("/gifts", {});
     return await response.json();
   }
@@ -16,7 +16,7 @@
     })
   }
 
-  let giftsPromise = fetchGifts();
+  let giftsPromise = load();
 </script>
 
 <h1>Denis' Gift List</h1>
@@ -43,6 +43,12 @@
     font-size: 2rem;
     font-weight: bold;
   }
+
+  @media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
   li {
     display: flex;
     margin: 10px;
