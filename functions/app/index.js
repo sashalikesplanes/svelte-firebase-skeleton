@@ -5618,7 +5618,7 @@ var init_index_svelte = __esm({
     init_shims();
     init_index_dea3f4e7();
     css3 = {
-      code: 'h1.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{margin:20px;font-size:2rem;font-weight:bold}@media only screen and (max-width: 600px){h1.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{font-size:1rem}}li.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{display:flex;margin:10px}a.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{color:rgb(44, 55, 66);text-decoration:none}.container.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.container.svelte-1p33fhw input.svelte-1p33fhw.svelte-1p33fhw{position:absolute;opacity:0;cursor:pointer;height:0;width:0}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw{position:absolute;top:0;left:0;height:25px;width:25px;background-color:rgb(223, 194, 181)}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw:hover{background-color:#ccc}.container.svelte-1p33fhw input.svelte-1p33fhw:checked~.checkmark.svelte-1p33fhw{background-color:rgb(44, 55, 66)}.checkmark.svelte-1p33fhw.svelte-1p33fhw.svelte-1p33fhw:after{content:"";position:absolute;display:none}.container.svelte-1p33fhw input.svelte-1p33fhw:checked~.checkmark.svelte-1p33fhw:after{display:block}.container.svelte-1p33fhw .checkmark.svelte-1p33fhw.svelte-1p33fhw:after{left:9px;top:5px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}',
+      code: 'h1.svelte-1q3v293{margin-bottom:20px;font-size:2rem;font-weight:bold}ul.svelte-1q3v293{padding:1rem;columns:3}.form-control.svelte-1q3v293{font-family:system-ui, sans-serif;font-size:1rem;font-weight:bold;line-height:1.1;display:grid;grid-template-columns:1em auto;gap:0.5em}@media only screen and (max-width: 600px){h1.svelte-1q3v293{font-size:1rem}ul.svelte-1q3v293{columns:1}p.svelte-1q3v293{font-size:0.75rem}.form-control.svelte-1q3v293{font-size:0.75rem}}li.svelte-1q3v293{display:flex;padding:0.5rem}a.svelte-1q3v293{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-1q3v293,.svelte-1q3v293:before,.svelte-1q3v293:after{box-sizing:border-box}form.svelte-1q3v293{display:grid;place-content:center}input[type="checkbox"].svelte-1q3v293{-webkit-appearance:none;appearance:none;background-color:var(--form-background);margin:0;font:inherit;color:currentColor;width:1.15em;height:1.15em;border:0.15em solid currentColor;border-radius:0.15em;transform:translateY(-0.075em);display:grid;place-content:center}input[type="checkbox"].svelte-1q3v293::before{content:"";width:0.65em;height:0.65em;clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);transform:scale(0);transform-origin:bottom left;transition:120ms transform ease-in-out;box-shadow:inset 1em 1em var(--form-control-color);background-color:CanvasText}input[type="checkbox"].svelte-1q3v293:checked::before{transform:scale(1)}input[type="checkbox"].svelte-1q3v293:focus{outline:max(2px, 0.15em) solid currentColor;outline-offset:max(2px, 0.15em)}input[type="checkbox"].svelte-1q3v293:disabled{--form-control-color:var(--form-control-disabled);color:var(--form-control-disabled);cursor:not-allowed}',
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5626,23 +5626,23 @@ var init_index_svelte = __esm({
       if ($$props.load === void 0 && $$bindings.load && load2 !== void 0)
         $$bindings.load(load2);
       $$result.css.add(css3);
-      return `<h1 class="${"svelte-1p33fhw"}">Denis&#39; Gift List</h1>
-<p>Please leave a tick on the gift(s) you wish to give</p>
-<p>If you have not yet found your gifts, here are some suggestions ;)</p>
-<p>Don&#39;t hesitate to pick one, or two, or three or more...</p>
+      return `<h1 class="${"svelte-1q3v293"}">Denis&#39; Gift List</h1>
+<p class="${"svelte-1q3v293"}">Please leave a tick on the gift(s) you wish to give</p>
+<p class="${"svelte-1q3v293"}">If you have not yet found your gifts, here are some suggestions ;)</p>
+<p class="${"svelte-1q3v293"}">Don&#39;t hesitate to pick one, or two, or three or more...</p>
 ${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop2);
           return `
-  <p>Loading Gifts...</p>
+  <p class="${"svelte-1q3v293"}">Loading Gifts...</p>
 `;
         }
         return function(gifts) {
           return `
-  <ul>${each(gifts, (gift) => {
-            return `<li class="${"svelte-1p33fhw"}"><label class="${"container svelte-1p33fhw"}"><a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1p33fhw"}">${escape(gift.name)}</a>
-          <input type="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1p33fhw"}">
-          <span class="${"checkmark svelte-1p33fhw"}"></span></label>
+  <ul class="${"svelte-1q3v293"}">${each(gifts, (gift) => {
+            return `<li class="${"svelte-1q3v293"}"><form action="${""}" class="${"svelte-1q3v293"}"><label class="${"form-control svelte-1q3v293"}"><input type="${"checkbox"}" name="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1q3v293"}">
+            <a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1q3v293"}">${escape(gift.name)}</a>
+          </label></form>
       </li>`;
           })}</ul>
 `;
@@ -5665,9 +5665,9 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-278e7968.js";
-    js3 = ["pages/index.svelte-278e7968.js", "chunks/index-62fbe76e.js"];
-    css4 = ["assets/pages/index.svelte-5408dff6.css"];
+    entry3 = "pages/index.svelte-6512f5a9.js";
+    js3 = ["pages/index.svelte-6512f5a9.js", "chunks/index-62fbe76e.js"];
+    css4 = ["assets/pages/index.svelte-525043d0.css"];
   }
 });
 
@@ -37488,7 +37488,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n			text-align: center;\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n			text-align: center;\n			padding: 1rem;\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var Server = class {
@@ -37548,7 +37548,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-89108345.js", "js": ["start-89108345.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-ae9dde41.js", "js": ["start-ae9dde41.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
