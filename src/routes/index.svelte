@@ -20,7 +20,9 @@
 </script>
 
 <h1>Denis' Gift List</h1>
-<p>Please leave a tick on the gift you intend to give</p>
+<p>Please leave a tick on the gift(s) you wish to give</p>
+<p>If you have not yet found your gifts, here are some suggestions ;)</p>
+<p>Don't hesitate to pick one, or two, or three or more...</p>
 {#await giftsPromise}
   <p>Loading Gifts...</p>
 {:then gifts}

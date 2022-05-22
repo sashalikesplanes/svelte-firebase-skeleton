@@ -5627,7 +5627,9 @@ var init_index_svelte = __esm({
         $$bindings.load(load2);
       $$result.css.add(css3);
       return `<h1 class="${"svelte-1p33fhw"}">Denis&#39; Gift List</h1>
-<p>Please leave a tick on the gift you intend to give</p>
+<p>Please leave a tick on the gift(s) you wish to give</p>
+<p>If you have not yet found your gifts, here are some suggestions ;)</p>
+<p>Don&#39;t hesitate to pick one, or two, or three or more...</p>
 ${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop2);
@@ -5663,8 +5665,8 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-9df0a4de.js";
-    js3 = ["pages/index.svelte-9df0a4de.js", "chunks/index-62fbe76e.js"];
+    entry3 = "pages/index.svelte-278e7968.js";
+    js3 = ["pages/index.svelte-278e7968.js", "chunks/index-62fbe76e.js"];
     css4 = ["assets/pages/index.svelte-5408dff6.css"];
   }
 });
@@ -37546,7 +37548,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-251d062b.js", "js": ["start-251d062b.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-89108345.js", "js": ["start-89108345.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
