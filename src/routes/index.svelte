@@ -41,16 +41,18 @@
 {/await}
 
 <style>
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: bold;
+  p {
+    line-height: 1.25rem;
   }
 
   ul {
-    padding: 1rem;
-    columns: 3;
+    columns: 2;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
   }
 
   .form-control {
@@ -60,7 +62,10 @@
   line-height: 1.1;
   display: grid;
   grid-template-columns: 1em auto;
+  align-items: center;
   gap: 0.5em;
+  width: 13rem;
+  margin: 0.1rem;
 }
   @media only screen and (max-width: 600px) {
   h1 {
@@ -69,17 +74,15 @@
   ul {
     columns: 1;
   }
+
   p {
     font-size: 0.75rem;
   }
   .form-control {
     font-size: 0.75rem;
+    width: 250px;
   }
 }
-  li {
-    display: flex;
-    padding: 0.5rem;
-  }
   a {
     color: rgb(44, 55, 66);
     text-decoration: none;
@@ -119,7 +122,6 @@ input[type="checkbox"] {
   height: 1.15em;
   border: 0.15em solid currentColor;
   border-radius: 0.15em;
-  transform: translateY(-0.075em);
 
   display: grid;
   place-content: center;
