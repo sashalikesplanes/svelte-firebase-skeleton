@@ -22,7 +22,7 @@
 <h1>Denis' Gift List</h1>
 <p>Please leave a tick on the gift(s) you wish to give</p>
 <p>If you have not yet found your gifts, here are some suggestions ;)</p>
-<p>Don't hesitate to pick one, or two, or three or more...</p>
+<p>Don't hesitate to pick one, or two, or three or donate on my behalf.</p>
 {#await giftsPromise}
   <p>Loading Gifts...</p>
 {:then gifts}
@@ -39,14 +39,23 @@
     {/each}
   </ul>
 {/await}
-
+<p><a target="_blank" class="donate-link" href="https://rolda.org/breaking-news-ukraine/#donation-box">Help the dogs!</a></p>
+<p><a target="_blank" class="donate-link" href="https://wck.org/">Feed the people!</a></p>
+<p><a target="_blank" class="address-link" href="https://goo.gl/maps/dcFPSX6DcLpzPSgW9">My address</a></p>
 <style>
+
+  .donate-link {
+    color: rgb(209, 161, 138);
+    font-weight: 800;
+  }
   p {
     line-height: 1.25rem;
   }
 
   ul {
-    columns: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
   }
 
   h1 {
@@ -55,11 +64,14 @@
     font-weight: bold;
   }
 
-  .form-control {
-  font-family: system-ui, sans-serif;
+  a {
+    font-family: system-ui, sans-serif;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.1;
+  }
+
+  .form-control {
   display: grid;
   grid-template-columns: 1em auto;
   align-items: center;
@@ -67,22 +79,19 @@
   width: 13rem;
   margin: 0.1rem;
 }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
   h1 {
     font-size: 1rem;
   }
   ul {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
 
   p {
     font-size: 0.75rem;
   }
-  .form-control {
-    font-size: 0.75rem;
-    width: 250px;
-  }
 }
+
   a {
     color: rgb(44, 55, 66);
     text-decoration: none;
@@ -145,15 +154,8 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-}
-
-input[type="checkbox"]:disabled {
-  --form-control-color: var(--form-control-disabled);
-
-  color: var(--form-control-disabled);
-  cursor: not-allowed;
+  outline: max(2px, 0.1em) solid currentColor;
+  outline-offset: max(2px, 0.1em);
 }
 </style>
 

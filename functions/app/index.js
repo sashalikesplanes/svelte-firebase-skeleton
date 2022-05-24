@@ -5618,7 +5618,7 @@ var init_index_svelte = __esm({
     init_shims();
     init_index_dea3f4e7();
     css3 = {
-      code: 'h1.svelte-1q3v293{margin-bottom:20px;font-size:2rem;font-weight:bold}ul.svelte-1q3v293{padding:1rem;columns:3}.form-control.svelte-1q3v293{font-family:system-ui, sans-serif;font-size:1rem;font-weight:bold;line-height:1.1;display:grid;grid-template-columns:1em auto;gap:0.5em}@media only screen and (max-width: 600px){h1.svelte-1q3v293{font-size:1rem}ul.svelte-1q3v293{columns:1}p.svelte-1q3v293{font-size:0.75rem}.form-control.svelte-1q3v293{font-size:0.75rem}}li.svelte-1q3v293{display:flex;padding:0.5rem}a.svelte-1q3v293{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-1q3v293,.svelte-1q3v293:before,.svelte-1q3v293:after{box-sizing:border-box}form.svelte-1q3v293{display:grid;place-content:center}input[type="checkbox"].svelte-1q3v293{-webkit-appearance:none;appearance:none;background-color:var(--form-background);margin:0;font:inherit;color:currentColor;width:1.15em;height:1.15em;border:0.15em solid currentColor;border-radius:0.15em;transform:translateY(-0.075em);display:grid;place-content:center}input[type="checkbox"].svelte-1q3v293::before{content:"";width:0.65em;height:0.65em;clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);transform:scale(0);transform-origin:bottom left;transition:120ms transform ease-in-out;box-shadow:inset 1em 1em var(--form-control-color);background-color:CanvasText}input[type="checkbox"].svelte-1q3v293:checked::before{transform:scale(1)}input[type="checkbox"].svelte-1q3v293:focus{outline:max(2px, 0.15em) solid currentColor;outline-offset:max(2px, 0.15em)}input[type="checkbox"].svelte-1q3v293:disabled{--form-control-color:var(--form-control-disabled);color:var(--form-control-disabled);cursor:not-allowed}',
+      code: '.donate-link.svelte-1tvapqx{color:rgb(209, 161, 138);font-weight:800}p.svelte-1tvapqx{line-height:1.25rem}ul.svelte-1tvapqx{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}h1.svelte-1tvapqx{margin-bottom:1.5rem;font-size:2rem;font-weight:bold}a.svelte-1tvapqx{font-family:system-ui, sans-serif;font-size:1rem;font-weight:600;line-height:1.1}.form-control.svelte-1tvapqx{display:grid;grid-template-columns:1em auto;align-items:center;gap:0.5em;width:13rem;margin:0.1rem}@media only screen and (max-width: 700px){h1.svelte-1tvapqx{font-size:1rem}ul.svelte-1tvapqx{grid-template-columns:1fr}p.svelte-1tvapqx{font-size:0.75rem}}a.svelte-1tvapqx{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-1tvapqx,.svelte-1tvapqx:before,.svelte-1tvapqx:after{box-sizing:border-box}form.svelte-1tvapqx{display:grid;place-content:center}input[type="checkbox"].svelte-1tvapqx{-webkit-appearance:none;appearance:none;background-color:var(--form-background);margin:0;font:inherit;color:currentColor;width:1.15em;height:1.15em;border:0.15em solid currentColor;border-radius:0.15em;display:grid;place-content:center}input[type="checkbox"].svelte-1tvapqx::before{content:"";width:0.65em;height:0.65em;clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);transform:scale(0);transform-origin:bottom left;transition:120ms transform ease-in-out;box-shadow:inset 1em 1em var(--form-control-color);background-color:CanvasText}input[type="checkbox"].svelte-1tvapqx:checked::before{transform:scale(1)}input[type="checkbox"].svelte-1tvapqx:focus{outline:max(2px, 0.1em) solid currentColor;outline-offset:max(2px, 0.1em)}',
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5626,28 +5626,31 @@ var init_index_svelte = __esm({
       if ($$props.load === void 0 && $$bindings.load && load2 !== void 0)
         $$bindings.load(load2);
       $$result.css.add(css3);
-      return `<h1 class="${"svelte-1q3v293"}">Denis&#39; Gift List</h1>
-<p class="${"svelte-1q3v293"}">Please leave a tick on the gift(s) you wish to give</p>
-<p class="${"svelte-1q3v293"}">If you have not yet found your gifts, here are some suggestions ;)</p>
-<p class="${"svelte-1q3v293"}">Don&#39;t hesitate to pick one, or two, or three or more...</p>
+      return `<h1 class="${"svelte-1tvapqx"}">Denis&#39; Gift List</h1>
+<p class="${"svelte-1tvapqx"}">Please leave a tick on the gift(s) you wish to give</p>
+<p class="${"svelte-1tvapqx"}">If you have not yet found your gifts, here are some suggestions ;)</p>
+<p class="${"svelte-1tvapqx"}">Don&#39;t hesitate to pick one, or two, or three or donate on my behalf.</p>
 ${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop2);
           return `
-  <p class="${"svelte-1q3v293"}">Loading Gifts...</p>
+  <p class="${"svelte-1tvapqx"}">Loading Gifts...</p>
 `;
         }
         return function(gifts) {
           return `
-  <ul class="${"svelte-1q3v293"}">${each(gifts, (gift) => {
-            return `<li class="${"svelte-1q3v293"}"><form action="${""}" class="${"svelte-1q3v293"}"><label class="${"form-control svelte-1q3v293"}"><input type="${"checkbox"}" name="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1q3v293"}">
-            <a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1q3v293"}">${escape(gift.name)}</a>
+  <ul class="${"svelte-1tvapqx"}">${each(gifts, (gift) => {
+            return `<li class="${"svelte-1tvapqx"}"><form action="${""}" class="${"svelte-1tvapqx"}"><label class="${"form-control svelte-1tvapqx"}"><input type="${"checkbox"}" name="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1tvapqx"}">
+            <a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1tvapqx"}">${escape(gift.name)}</a>
           </label></form>
       </li>`;
           })}</ul>
 `;
         }(__value);
-      }(giftsPromise)}`;
+      }(giftsPromise)}
+<p class="${"svelte-1tvapqx"}"><a target="${"_blank"}" class="${"donate-link svelte-1tvapqx"}" href="${"https://rolda.org/breaking-news-ukraine/#donation-box"}">Help the dogs!</a></p>
+<p class="${"svelte-1tvapqx"}"><a target="${"_blank"}" class="${"donate-link svelte-1tvapqx"}" href="${"https://wck.org/"}">Feed the people!</a></p>
+<p class="${"svelte-1tvapqx"}"><a target="${"_blank"}" class="${"address-link svelte-1tvapqx"}" href="${"https://goo.gl/maps/dcFPSX6DcLpzPSgW9"}">My address</a></p>`;
     });
   }
 });
@@ -5665,9 +5668,9 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-6512f5a9.js";
-    js3 = ["pages/index.svelte-6512f5a9.js", "chunks/index-62fbe76e.js"];
-    css4 = ["assets/pages/index.svelte-525043d0.css"];
+    entry3 = "pages/index.svelte-97cf7490.js";
+    js3 = ["pages/index.svelte-97cf7490.js", "chunks/index-62fbe76e.js"];
+    css4 = ["assets/pages/index.svelte-6387aac7.css"];
   }
 });
 
@@ -37488,7 +37491,7 @@ function set_paths(paths) {
   base = paths.base;
   assets = paths.assets || base;
 }
-var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			gap: 20px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n			text-align: center;\n			padding: 1rem;\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
+var template = ({ head, body, assets: assets2, nonce }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n	</head>\n	<link rel="stylesheet" href="' + assets2 + '/reset.css" />\n	<style>\n		div.app {\n			display: flex;\n			flex-direction: column;\n			align-items: center;\n			box-sizing: border-box;\n			gap: 20px;\n			max-width: 1000px;\n		}\n		body {\n			font-family: sans-serif;\n			color: rgb(44, 55, 66);\n			background-color: rgb(233, 233, 243);\n			text-align: center;\n			padding: 1rem;\n			display: flex;\n			justify-content: center;\n		}\n\n		html {\n			font-size: 24px;\n		}\n	</style>\n	<body>\n		<div class="app">' + body + "</div>\n	</body>\n</html>\n";
 var read = null;
 set_paths({ "base": "", "assets": "" });
 var Server = class {
@@ -37548,7 +37551,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-ae9dde41.js", "js": ["start-ae9dde41.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-b2eb7a8f.js", "js": ["start-b2eb7a8f.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
