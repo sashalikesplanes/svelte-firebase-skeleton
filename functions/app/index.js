@@ -37556,7 +37556,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-cf0a1392.js", "js": ["start-cf0a1392.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-1edb9866.js", "js": ["start-1edb9866.js", "chunks/index-62fbe76e.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
