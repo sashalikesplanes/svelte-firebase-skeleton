@@ -22,7 +22,7 @@
 <h1>Denis' Gift List</h1>
 <p>Please leave a tick on the gift(s) you wish to give</p>
 <p>If you have not yet found your gifts, here are some suggestions ;)</p>
-<p>Don't hesitate to pick one, or two, or three or donate on my behalf.</p>
+<p>Don't hesitate to pick one, or two, or three or donate to charities listed below on my behalf.</p>
 {#await giftsPromise}
   <p>Loading Gifts...</p>
 {:then gifts}
@@ -41,7 +41,12 @@
 {/await}
 <p><a target="_blank" class="donate-link" href="https://rolda.org/breaking-news-ukraine/#donation-box">Help the dogs!</a></p>
 <p><a target="_blank" class="donate-link" href="https://wck.org/">Feed the people!</a></p>
-<p><a target="_blank" class="address-link" href="https://goo.gl/maps/dcFPSX6DcLpzPSgW9">My address</a></p>
+<p class="big">Address For Delivery:</p>
+<p class="big">Denis Kiselev</p>
+<p class="big">37, Avenue Commandante Bret</p>
+<p class="big">06400, Cannes, France </p>
+<p class="big">Tél: 06 50 56 81 16</p>
+<p class="big">Please send all notifications to: <a href="mailto:dakiselev@gmail.com">dakiselev@gmail.com</a></p>
 <style>
 
   .donate-link {
@@ -66,7 +71,7 @@
 
   a {
     font-family: system-ui, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.1;
   }
@@ -76,10 +81,14 @@
   grid-template-columns: 1em auto;
   align-items: center;
   gap: 0.5em;
-  width: 13rem;
+  width: 14rem;
   margin: 0.1rem;
 }
   @media only screen and (max-width: 700px) {
+
+  .form-control {
+    width: 12rem;
+  }
   h1 {
     font-size: 1rem;
   }
@@ -88,6 +97,13 @@
   }
 
   p {
+    font-size: 0.75rem;
+  }
+  p.big {
+    font-size: 0.8rem;
+  }
+
+  a {
     font-size: 0.75rem;
   }
 }
@@ -127,8 +143,8 @@ input[type="checkbox"] {
 
   font: inherit;
   color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
+  width: 0.75em;
+  height: 0.75em;
   border: 0.15em solid currentColor;
   border-radius: 0.15em;
 
@@ -138,8 +154,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
   content: "";
-  width: 0.65em;
-  height: 0.65em;
+  width: 0.4em;
+  height: 0.4em;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   transform: scale(0);
   transform-origin: bottom left;
