@@ -5402,7 +5402,7 @@ var init_shims = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-dea3f4e7.js
+// .svelte-kit/output/server/chunks/index-64e190fe.js
 function noop2() {
 }
 function is_promise(value) {
@@ -5491,8 +5491,8 @@ function add_attribute(name4, value, boolean) {
   return ` ${name4}${assignment}`;
 }
 var current_component, escaped, missing_component, on_destroy;
-var init_index_dea3f4e7 = __esm({
-  ".svelte-kit/output/server/chunks/index-dea3f4e7.js"() {
+var init_index_64e190fe = __esm({
+  ".svelte-kit/output/server/chunks/index-64e190fe.js"() {
     init_shims();
     Promise.resolve();
     escaped = {
@@ -5525,7 +5525,7 @@ var Layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/fallbacks/layout.svelte.js"() {
     init_shims();
-    init_index_dea3f4e7();
+    init_index_64e190fe();
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${slots.default ? slots.default({}) : ``}`;
     });
@@ -5545,8 +5545,8 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_shims();
     init_layout_svelte();
-    entry = "layout.svelte-76e8569c.js";
-    js = ["layout.svelte-76e8569c.js", "chunks/index-62fbe76e.js"];
+    entry = "layout.svelte-c938f3b9.js";
+    js = ["layout.svelte-c938f3b9.js", "chunks/index-a47acaee.js"];
     css = [];
   }
 });
@@ -5564,7 +5564,7 @@ var Error2;
 var init_error_svelte = __esm({
   ".svelte-kit/output/server/entries/fallbacks/error.svelte.js"() {
     init_shims();
-    init_index_dea3f4e7();
+    init_index_64e190fe();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -5597,8 +5597,8 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_shims();
     init_error_svelte();
-    entry2 = "error.svelte-eacad67e.js";
-    js2 = ["error.svelte-eacad67e.js", "chunks/index-62fbe76e.js"];
+    entry2 = "error.svelte-044c355d.js";
+    js2 = ["error.svelte-044c355d.js", "chunks/index-a47acaee.js"];
     css2 = [];
   }
 });
@@ -5608,54 +5608,71 @@ var index_svelte_exports = {};
 __export(index_svelte_exports, {
   default: () => Routes
 });
-async function load2() {
-  const response = await fetch("/gifts", {});
-  return await response.json();
-}
-var css3, Routes;
+var css$1, GiftItem, css3, Routes;
 var init_index_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/index.svelte.js"() {
     init_shims();
-    init_index_dea3f4e7();
+    init_index_64e190fe();
+    css$1 = {
+      code: '.svelte-19z444:link,.svelte-19z444:visited{color:rgb(209, 161, 138);font-family:system-ui, sans-serif;font-size:0.9rem;font-weight:600;line-height:1.1;text-decoration:underline}.form-control.svelte-19z444{display:grid;grid-template-columns:1em auto;align-items:center;gap:0.5em;width:14rem;margin:0.1rem}@media only screen and (max-width: 700px){.form-control.svelte-19z444{width:12.5rem}a.svelte-19z444{font-size:0.75rem}}a.svelte-19z444{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-19z444,.svelte-19z444:before,.svelte-19z444:after{box-sizing:border-box}form.svelte-19z444{display:grid;place-content:center}input[type="checkbox"].svelte-19z444{-webkit-appearance:none;appearance:none;background-color:var(--form-background);margin:0;font:inherit;color:currentColor;width:0.75em;height:0.75em;border:0.15em solid currentColor;border-radius:0.15em;display:grid;place-content:center}input[type="checkbox"].svelte-19z444::before{content:"";width:0.4em;height:0.4em;clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);transform:scale(0);transform-origin:bottom left;transition:120ms transform ease-in-out;box-shadow:inset 1em 1em var(--form-control-color);background-color:CanvasText}input[type="checkbox"].svelte-19z444:checked::before{transform:scale(1)}input[type="checkbox"].svelte-19z444:focus{outline:max(2px, 0.1em) solid currentColor;outline-offset:max(2px, 0.1em)}',
+      map: null
+    };
+    GiftItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { giftClaimed } = $$props;
+      let { giftName } = $$props;
+      let { giftId } = $$props;
+      let { giftLink } = $$props;
+      const forceUpdate = async (_) => {
+      };
+      if ($$props.giftClaimed === void 0 && $$bindings.giftClaimed && giftClaimed !== void 0)
+        $$bindings.giftClaimed(giftClaimed);
+      if ($$props.giftName === void 0 && $$bindings.giftName && giftName !== void 0)
+        $$bindings.giftName(giftName);
+      if ($$props.giftId === void 0 && $$bindings.giftId && giftId !== void 0)
+        $$bindings.giftId(giftId);
+      if ($$props.giftLink === void 0 && $$bindings.giftLink && giftLink !== void 0)
+        $$bindings.giftLink(giftLink);
+      $$result.css.add(css$1);
+      return `${function(__value) {
+        if (is_promise(__value)) {
+          __value.then(null, noop2);
+          return ``;
+        }
+        return function(_) {
+          return `
+<li class="${"svelte-19z444"}"><form action="${""}" class="${"svelte-19z444"}"><label class="${"form-control svelte-19z444"}"><input type="${"checkbox"}" name="${"checkbox"}" class="${"svelte-19z444"}"${add_attribute("checked", giftClaimed, 1)}>
+        <a${add_attribute("href", giftLink, 0)} target="${"_blank"}" class="${"svelte-19z444"}">${escape(giftName)}</a></label></form></li>
+`;
+        }();
+      }(forceUpdate())}`;
+    });
     css3 = {
-      code: '.donate-link.svelte-1r9kopx{color:rgb(209, 161, 138);font-weight:800}p.svelte-1r9kopx{line-height:1.25rem}ul.svelte-1r9kopx{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}h1.svelte-1r9kopx{margin-bottom:1.5rem;font-size:2rem;font-weight:bold}a.svelte-1r9kopx{font-family:system-ui, sans-serif;font-size:0.9rem;font-weight:600;line-height:1.1}.form-control.svelte-1r9kopx{display:grid;grid-template-columns:1em auto;align-items:center;gap:0.5em;width:14rem;margin:0.1rem}@media only screen and (max-width: 700px){.form-control.svelte-1r9kopx{width:12rem}h1.svelte-1r9kopx{font-size:1rem}ul.svelte-1r9kopx{grid-template-columns:1fr}p.svelte-1r9kopx{font-size:0.75rem}p.big.svelte-1r9kopx{font-size:0.8rem}a.svelte-1r9kopx{font-size:0.75rem}}a.svelte-1r9kopx{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-1r9kopx,.svelte-1r9kopx:before,.svelte-1r9kopx:after{box-sizing:border-box}form.svelte-1r9kopx{display:grid;place-content:center}input[type="checkbox"].svelte-1r9kopx{-webkit-appearance:none;appearance:none;background-color:var(--form-background);margin:0;font:inherit;color:currentColor;width:0.75em;height:0.75em;border:0.15em solid currentColor;border-radius:0.15em;display:grid;place-content:center}input[type="checkbox"].svelte-1r9kopx::before{content:"";width:0.4em;height:0.4em;clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);transform:scale(0);transform-origin:bottom left;transition:120ms transform ease-in-out;box-shadow:inset 1em 1em var(--form-control-color);background-color:CanvasText}input[type="checkbox"].svelte-1r9kopx:checked::before{transform:scale(1)}input[type="checkbox"].svelte-1r9kopx:focus{outline:max(2px, 0.1em) solid currentColor;outline-offset:max(2px, 0.1em)}',
+      code: ".donate-link.svelte-7d5yo4{font-weight:800}p.svelte-7d5yo4{line-height:1.25rem}ul.svelte-7d5yo4{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}h1.svelte-7d5yo4{margin-bottom:1.5rem;font-size:2rem;font-weight:bold}.svelte-7d5yo4:link,.svelte-7d5yo4:visited{color:rgb(209, 161, 138);font-family:system-ui, sans-serif;font-size:0.9rem;font-weight:600;line-height:1.1;text-decoration:underline}@media only screen and (max-width: 700px){h1.svelte-7d5yo4{font-size:1rem}ul.svelte-7d5yo4{grid-template-columns:1fr}p.svelte-7d5yo4{font-size:0.75rem}p.big.svelte-7d5yo4{font-size:0.8rem}a.svelte-7d5yo4{font-size:0.75rem}}a.svelte-7d5yo4{color:rgb(44, 55, 66);text-decoration:none}:root{--form-control-color:rgb(209, 161, 138);--form-control-disabled:#959495}.svelte-7d5yo4,.svelte-7d5yo4:before,.svelte-7d5yo4:after{box-sizing:border-box}",
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let giftsPromise = load2();
-      if ($$props.load === void 0 && $$bindings.load && load2 !== void 0)
-        $$bindings.load(load2);
+      let gifts = [];
       $$result.css.add(css3);
-      return `<h1 class="${"svelte-1r9kopx"}">Denis&#39; Gift List</h1>
-<p class="${"svelte-1r9kopx"}">Please leave a tick on the gift(s) you wish to give</p>
-<p class="${"svelte-1r9kopx"}">If you have not yet found your gifts, here are some suggestions ;)</p>
-<p class="${"svelte-1r9kopx"}">Don&#39;t hesitate to pick one, or two, or three or donate to charities listed below on my behalf.</p>
-${function(__value) {
-        if (is_promise(__value)) {
-          __value.then(null, noop2);
-          return `
-  <p class="${"svelte-1r9kopx"}">Loading Gifts...</p>
-`;
-        }
-        return function(gifts) {
-          return `
-  <ul class="${"svelte-1r9kopx"}">${each(gifts, (gift) => {
-            return `<li class="${"svelte-1r9kopx"}"><form action="${""}" class="${"svelte-1r9kopx"}"><label class="${"form-control svelte-1r9kopx"}"><input type="${"checkbox"}" name="${"checkbox"}" ${gift.claimed ? "checked" : ""} class="${"svelte-1r9kopx"}">
-            <a${add_attribute("href", gift.link, 0)} target="${"_blank"}" class="${"svelte-1r9kopx"}">${escape(gift.name)}</a>
-          </label></form>
-      </li>`;
-          })}</ul>
-`;
-        }(__value);
-      }(giftsPromise)}
-<p class="${"svelte-1r9kopx"}"><a target="${"_blank"}" class="${"donate-link svelte-1r9kopx"}" href="${"https://rolda.org/breaking-news-ukraine/#donation-box"}">Help the dogs!</a></p>
-<p class="${"svelte-1r9kopx"}"><a target="${"_blank"}" class="${"donate-link svelte-1r9kopx"}" href="${"https://wck.org/"}">Feed the people!</a></p>
-<p class="${"big svelte-1r9kopx"}">Address For Delivery:</p>
-<p class="${"big svelte-1r9kopx"}">Denis Kiselev</p>
-<p class="${"big svelte-1r9kopx"}">37, Avenue Commandante Bret</p>
-<p class="${"big svelte-1r9kopx"}">06400, Cannes, France </p>
-<p class="${"big svelte-1r9kopx"}">T\xE9l: 06 50 56 81 16</p>
-<p class="${"big svelte-1r9kopx"}">Please send all notifications to: <a href="${"mailto:dakiselev@gmail.com"}" class="${"svelte-1r9kopx"}">dakiselev@gmail.com</a></p>`;
+      return `<h1 class="${"svelte-7d5yo4"}">Denis&#39; Gift List</h1>
+<p class="${"svelte-7d5yo4"}">Please leave a tick on the gift(s) you wish to give</p>
+<p class="${"svelte-7d5yo4"}">If you have not yet found your gifts, here are some suggestions ;)</p>
+<p class="${"svelte-7d5yo4"}">Don&#39;t hesitate to pick one, or two, or three or donate to charities listed below on my behalf.</p>
+<ul class="${"svelte-7d5yo4"}">${each(gifts, (gift) => {
+        return `${validate_component(GiftItem, "GiftItem").$$render($$result, {
+          giftClaimed: gift.claimed,
+          giftName: gift.name,
+          giftId: gift.id,
+          giftLink: gift.link
+        }, {}, {})}`;
+      })}</ul>
+<p class="${"svelte-7d5yo4"}"><a target="${"_blank"}" class="${"donate-link svelte-7d5yo4"}" href="${"https://rolda.org/breaking-news-ukraine/#donation-box"}">Help the dogs!</a></p>
+<p class="${"svelte-7d5yo4"}"><a target="${"_blank"}" class="${"donate-link svelte-7d5yo4"}" href="${"https://wck.org/"}">Feed the people!</a></p>
+<p class="${"big svelte-7d5yo4"}">Address For Delivery:</p>
+<p class="${"big svelte-7d5yo4"}">Denis Kiselev</p>
+<p class="${"big svelte-7d5yo4"}">37, Avenue Commandant Bret</p>
+<p class="${"big svelte-7d5yo4"}">06400, Cannes, France </p>
+<p class="${"big svelte-7d5yo4"}">T\xE9l: 06 50 56 81 16</p>
+<p class="${"big svelte-7d5yo4"}">Please send all notifications to: <a href="${"mailto:dakiselev@gmail.com"}" class="${"svelte-7d5yo4"}">dakiselev@gmail.com</a></p>`;
     });
   }
 });
@@ -5673,9 +5690,9 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_shims();
     init_index_svelte();
-    entry3 = "pages/index.svelte-489881f9.js";
-    js3 = ["pages/index.svelte-489881f9.js", "chunks/index-62fbe76e.js"];
-    css4 = ["assets/pages/index.svelte-7f0ec4ea.css"];
+    entry3 = "pages/index.svelte-c7378ed3.js";
+    js3 = ["pages/index.svelte-c7378ed3.js", "chunks/index-a47acaee.js"];
+    css4 = ["assets/pages/index.svelte-af6a88f2.css"];
   }
 });
 
@@ -13781,14 +13798,14 @@ var require_root = __commonJS({
     Root2.prototype.fetch = util.fetch;
     function SYNC() {
     }
-    Root2.prototype.load = function load3(filename, options, callback) {
+    Root2.prototype.load = function load2(filename, options, callback) {
       if (typeof options === "function") {
         callback = options;
         options = void 0;
       }
       var self2 = this;
       if (!callback)
-        return util.asPromise(load3, self2, filename, options);
+        return util.asPromise(load2, self2, filename, options);
       var sync = callback === SYNC;
       function finish(err, root) {
         if (!callback)
@@ -14342,7 +14359,7 @@ var require_index_light = __commonJS({
     init_shims();
     var protobuf = module2.exports = require_index_minimal();
     protobuf.build = "light";
-    function load3(filename, root, callback) {
+    function load2(filename, root, callback) {
       if (typeof root === "function") {
         callback = root;
         root = new protobuf.Root();
@@ -14350,7 +14367,7 @@ var require_index_light = __commonJS({
         root = new protobuf.Root();
       return root.load(filename, callback);
     }
-    protobuf.load = load3;
+    protobuf.load = load2;
     function loadSync(filename, root) {
       if (!root)
         root = new protobuf.Root();
@@ -18038,12 +18055,12 @@ var require_src2 = __commonJS({
       root.resolveAll();
       return createPackageDefinition(root, options);
     }
-    function load3(filename, options) {
+    function load2(filename, options) {
       return util_1.loadProtosWithOptions(filename, options).then((loadedRoot) => {
         return createPackageDefinition(loadedRoot, options);
       });
     }
-    exports2.load = load3;
+    exports2.load = load2;
     function loadSync(filename, options) {
       const loadedRoot = util_1.loadProtosWithOptionsSync(filename, options);
       return createPackageDefinition(loadedRoot, options);
@@ -23180,6 +23197,9 @@ function formatJSON(value) {
 }
 function getLogLevel() {
   return logClient.logLevel;
+}
+function setLogLevel2(logLevel) {
+  logClient.setLogLevel(logLevel);
 }
 function logDebug(msg, ...obj) {
   if (logClient.logLevel <= LogLevel.DEBUG) {
@@ -35198,6 +35218,7 @@ async function post({ request }) {
     const gift = await request.json();
     const giftDoc = doc(db, COLLECTION_NAME, gift.id);
     await updateDoc(giftDoc, { claimed: !gift.claimed });
+    console.error(`Gift : ${gift.name} is now ${!gift.claimed ? "claimed" : "unclaimed"}`);
     return {
       status: 201
     };
@@ -35237,6 +35258,7 @@ var init_gifts = __esm({
     firebaseConfig = JSON.parse('{"apiKey":"AIzaSyCOD_ebFShJS5rF2h4s8wYI4ONK3v8CR-g","authDomain":"fir-demo-1f579.firebaseapp.com","projectId":"fir-demo-1f579","storageBucket":"fir-demo-1f579.appspot.com","messagingSenderId":"803667900690","appId":"1:803667900690:web:f0c4bc015354674dc25bcb"}');
     app = initializeApp(firebaseConfig);
     db = getFirestore(app);
+    setLogLevel2("debug");
   }
 });
 
@@ -35250,7 +35272,7 @@ init_shims();
 
 // .svelte-kit/output/server/index.js
 init_shims();
-init_index_dea3f4e7();
+init_index_64e190fe();
 var __defProp2 = Object.defineProperty;
 var __defProps2 = Object.defineProperties;
 var __getOwnPropDescs2 = Object.getOwnPropertyDescriptors;
@@ -37556,7 +37578,7 @@ var manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "reset.css"]),
   mimeTypes: { ".png": "image/png", ".css": "text/css" },
   _: {
-    entry: { "file": "start-1edb9866.js", "js": ["start-1edb9866.js", "chunks/index-62fbe76e.js"], "css": [] },
+    entry: { "file": "start-8c80cedc.js", "js": ["start-8c80cedc.js", "chunks/index-a47acaee.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),

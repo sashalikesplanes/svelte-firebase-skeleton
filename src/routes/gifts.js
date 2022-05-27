@@ -11,7 +11,8 @@ import {
 	doc,
 	updateDoc,
 	query,
-	getDocs
+	getDocs,
+	setLogLevel
 	// onSnapshot
 } from 'firebase/firestore';
 
@@ -23,6 +24,7 @@ const firebaseConfig = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG);
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
+setLogLevel('debug');
 
 export async function get() {
 	try {
@@ -51,6 +53,8 @@ export async function post({ request }) {
 		const giftDoc = doc(db, COLLECTION_NAME, gift.id);
 
 		await updateDoc(giftDoc, { claimed: !gift.claimed });
+
+		console.error(`Gift : ${gift.name} is now ${!gift.claimed ? 'claimed' : 'unclaimed'}`);
 
 		return {
 			status: 201
